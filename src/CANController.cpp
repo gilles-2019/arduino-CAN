@@ -164,7 +164,7 @@ int CANControllerClass::read()
     digitalWrite(LED_BUILTIN,0);
     return -1;
   }
-  digitalWrite(LED_BUILTIN,0);
+  digitalWrite(LED_BUILTIN,1);
   return _rxData[_rxIndex++];
 }
 
