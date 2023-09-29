@@ -161,9 +161,10 @@ int CANControllerClass::available()
 int CANControllerClass::read()
 {
   if (!available()) {
+    digitalWrite(LED_BUILTIN,0);
     return -1;
   }
-
+  digitalWrite(LED_BUILTIN,0);
   return _rxData[_rxIndex++];
 }
 
